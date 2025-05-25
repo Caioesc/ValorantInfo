@@ -9,7 +9,7 @@
 
 
 <p align="center">
-  <img src="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt962a6518612d78db/6131a93da9655d098c7cd8f0/09082021-Episode-3-Act-II-Overview-Article-Banner.jpg" alt="Valorant Banner" width="100%">
+  <img src="https://static.wikia.nocookie.net/valorant/images/8/80/Valorant_Cover_Art.jpg/revision/latest?cb=20201121020429&path-prefix=pt-br" alt="Valorant Banner" width="100%">
 </p>
 
 **Um aplicativo mobile feito com Ionic/Angular para explorar agentes, armas, mapas e bundles do VALORANT.**
