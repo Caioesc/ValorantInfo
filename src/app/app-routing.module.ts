@@ -15,6 +15,18 @@ const routes: Routes = [
     path: 'listar',
     loadChildren: () => import('./listar/listar.module').then( m => m.ListarPageModule)
   },
+  {
+    path: 'detalhes-personagens/:id',
+    loadChildren: () => import('./detalhes-personagens/detalhes-personagens.module').then( m => m.DetalhesPersonagensPageModule)
+  },
+  {
+    path: 'listar-armas',
+    loadChildren: () => import('./listar-armas/listar-armas.module').then( m => m.ListarArmasPageModule)
+  },
+  {
+    path: 'detalhes-armas/:id',
+    loadChildren: () => import('./detalhes-armas/detalhes-armas.module').then( m => m.DetalhesArmasPageModule)
+  },
 ];
 
 @NgModule({

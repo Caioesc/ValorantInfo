@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button text="Voltar" defaultHref="/listar-armas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ arma?.displayName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="arma">
+  <div class="arma-3d-container">
+    <img [src]="arma.displayIcon" [alt]="arma.displayName" class="arma-3d">
+  </div>
+
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>{{ arma.displayName }}</ion-card-title>
+      <ion-card-subtitle>
+        {{ arma.shopData?.categoryText }} • 
+        {{ arma.shopData?.cost | currency:'VP ' }}
+      </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-chip color="danger" *ngIf="arma.weaponStats">
+        Dano: {{ arma.weaponStats?.damageRanges[0]?.headDamage | number }} (Cabeça)
+      </ion-chip>
+
+      <ion-list-header class="skins-header">
+        <ion-label>Skins ({{ arma.skins?.length }})</ion-label>
+      </ion-list-header>
+
+      <div class="skins-container">
+        <div class="skin-item" *ngFor="let skin of arma.skins">
+          <img [src]="skin.displayIcon || skin.chromas[0]?.displayIcon" [alt]="skin.displayName">
+          <div class="skin-info">
+            <h3>{{ skin.displayName }}</h3>
+            <p *ngIf="skin.contentTier?.displayName" class="tier" [style.color]="skin.contentTier?.highlightColor">
+              {{ skin.contentTier?.displayName }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

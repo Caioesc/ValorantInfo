@@ -9,13 +9,14 @@ import { ValorantApiService } from '../services/valorant-api.service';
 })
 export class ListarPage implements OnInit {
 
-  constructor(private valorant: ValorantApiService) { }
+  constructor(private valorantService: ValorantApiService) { }
   personagens: any[] = []
+
   ngOnInit() {
-    this.valorant.buscarTodosAgentes().subscribe((dados:any) => {
-      console.log(dados)
+    this.valorantService.buscarTodosAgentes().subscribe((dados:any) => {
       this.personagens = dados.data
     })
   }
+
 
 }

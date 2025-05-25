@@ -8,7 +8,19 @@ export class ValorantApiService {
 
   constructor(private http: HttpClient) { }
 
-  buscarTodosAgentes(){
+  buscarTodosAgentes() {
     return this.http.get('https://valorant-api.com/v1/agents?language=pt-BR&isPlayableCharacter=true')
+  }
+
+  buscarAgentePorId(id: string) {
+    return this.http.get(`https://valorant-api.com/v1/agents/${id}?language=pt-BR&isPlayableCharacter=true`)
+  }
+
+  buscarTodasArmas() {
+    return this.http.get('https://valorant-api.com/v1/weapons?language=pt-BR')
+  }
+
+  buscarArmaPorId(id: string) {
+    return this.http.get(`https://valorant-api.com/v1/weapons/${id}?language=pt-BR`)
   }
 }

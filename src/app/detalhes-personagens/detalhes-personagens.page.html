@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Voltar" defaultHref="/listar-armas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ agente?.displayName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="agente">
+  <ion-img [src]="agente.fullPortrait"></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ agente.displayName }}</ion-card-title>
+      <ion-card-subtitle>{{ agente.role?.displayName}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ agente.description }}</p>
+      <h3>Habilidades:</h3>
+      <ion-list>
+        <ion-item *ngFor="let habilidade of agente.abilities">
+          <ion-thumbnail slot="start">
+            <img [src]="habilidade.displayIcon" *ngIf="habilidade.displayIcon">
+          </ion-thumbnail>
+          <ion-label>
+            <h4>{{ habilidade.displayName }}</h4>
+            <p>{{ habilidade.description }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
