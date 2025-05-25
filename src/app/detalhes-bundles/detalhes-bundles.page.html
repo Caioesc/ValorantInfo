@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/listar-bundles"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ bundle?.displayName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="bundle">
+  <div class="banner-container">
+    <img [src]="bundle.displayIcon" 
+         [alt]="bundle.displayName"
+         class="banner-image">
+  </div>
+
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>{{ bundle.displayName }}</ion-card-title>
+      <ion-card-subtitle>
+        Descrição: {{bundle.description}}
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

@@ -35,6 +35,14 @@ const routes: Routes = [
     path: 'listar-bundles',
     loadChildren: () => import('./listar-bundles/listar-bundles.module').then( m => m.ListarBundlesPageModule)
   },
+  {
+    path: 'detalhes-mapas/:id',
+    loadChildren: () => import('./detalhes-mapas/detalhes-mapas.module').then( m => m.DetalhesMapasPageModule)
+  },
+  {
+    path: 'detalhes-bundles/:id',
+    loadChildren: () => import('./detalhes-bundles/detalhes-bundles.module').then( m => m.DetalhesBundlesPageModule)
+  },
 ];
 
 @NgModule({

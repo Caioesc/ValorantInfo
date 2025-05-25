@@ -1,0 +1,10 @@
+.banner-container {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  
+  .banner-image {
+    max-height: 200px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/listar-mapas"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ mapa?.displayName }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" *ngIf="mapa">
+  <div class="mapa-container">
+    <img [src]="mapa.splash" [alt]="mapa.displayName" class="mapa-image">
+  </div>
+
+  <ion-card class="info-card">
+    <ion-card-header>
+      <ion-card-title>{{ mapa.displayName }}</ion-card-title>
+      <ion-card-subtitle>
+        Localização: {{ mapa.coordinates }}
+      </ion-card-subtitle>
+      <ion-card-subtitle>
+        Plants do mapa: {{mapa.tacticalDescription}}
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
