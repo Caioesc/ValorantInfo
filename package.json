@@ -3,13 +3,14 @@
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
-  "scripts": {
-  "build": "ionic build --prod",
-  "vercel-build": "npm install && npm run build && mv www public",
-  "clean": "rm -rf node_modules package-lock.json",
-  "start": "ionic serve"
-},
   "private": true,
+  "description": "An Ionic project",
+  "scripts": {
+    "build": "ionic build --prod",
+    "vercel-build": "npm run build && mv www public",
+    "clean": "rm -rf node_modules package-lock.json",
+    "start": "ionic serve"
+  },
   "dependencies": {
     "@angular/animations": "^19.0.0",
     "@angular/common": "^19.0.0",
@@ -62,6 +63,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "rimraf": "^6.0.1",
     "typescript": "~5.6.3"
-  },
-  "description": "An Ionic project"
+  }
 }
