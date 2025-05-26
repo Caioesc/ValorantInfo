@@ -1,0 +1,4 @@
+node_modules/
+capacitor.config.*
+plugins/
+platforms/
