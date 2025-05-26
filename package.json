@@ -6,10 +6,10 @@
   "private": true,
   "description": "An Ionic project",
   "scripts": {
-    "build": "npx ionic build --prod --output-path=public",
-    "vercel-build": "npm ci && npm run build",
+    "build": "ionic build --prod --output-path=dist",
+    "vercel-build": "npm ci && npm run build && node postbuild.js",
     "start": "ionic serve",
-    "clean": "rm -rf node_modules package-lock.json .cache .angular public"
+    "clean": "rm -rf node_modules package-lock.json .cache .angular dist"
   },
   "dependencies": {
     "@angular/animations": "^19.0.0",
