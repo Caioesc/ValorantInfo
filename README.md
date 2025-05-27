@@ -65,6 +65,7 @@ npm install
 ```bash
 ionic serve
 ```
+Ou acesse o site hospedado: [ValorantInfo](https://valorant-info-seven.vercel.app/)
 
 ## 📌 Conecte-se comigo:
 
